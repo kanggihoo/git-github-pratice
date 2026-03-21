@@ -64,3 +64,20 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
+/* 할 일 항목 스타일 */
+#tasks li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#tasks li:hover {
+    background-color: #f0f0f0;
+}
+
+#tasks li.done {
+    text-decoration: line-through;
+    color: #999;
+}
