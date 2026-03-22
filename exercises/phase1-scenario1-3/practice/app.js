@@ -32,3 +32,12 @@ function deleteNote(id) {
         renderNotes();
     }
 }
+
+function editNote(id, newTitle, newContent) {
+    const note = notes.find(n => n.id === id);
+    if (note) {
+        note.title = newTitle;
+        note.content = newContent;
+        renderNotes();
+    }
+}
