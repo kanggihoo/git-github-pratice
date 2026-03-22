@@ -36,3 +36,13 @@ main {
     margin-bottom: 1rem;
     border-left: 4px solid #e94560;
 }
+
+.note-card h3 {
+    color: #e94560;
+    margin-bottom: 0.5rem;
+}
+
+.note-card p {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
