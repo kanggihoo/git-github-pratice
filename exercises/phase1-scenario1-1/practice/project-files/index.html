@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - 할 일 관리</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TaskFlow</h1>
+        <nav>
+            <a href="/">홈</a>
+            <a href="/profile">프로필</a>
+            <a href="/login">로그인</a>
+        </nav>
+    </header>
+    <main>
+        <section id="task-list">
+            <h2>오늘의 할 일</h2>
+            <ul id="tasks"></ul>
+        </section>
+        <section id="add-task">
+            <input type="text" id="task-input" placeholder="새 할 일 입력...">
+            <button onclick="addTask()">추가</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
