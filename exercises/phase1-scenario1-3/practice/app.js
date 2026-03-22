@@ -18,3 +18,9 @@ function renderNotes() {
 }
 
 document.addEventListener('DOMContentLoaded', renderNotes);
+
+function searchNotes(keyword) {
+    return notes.filter(n =>
+        n.title.includes(keyword) || n.content.includes(keyword)
+    );
+}
