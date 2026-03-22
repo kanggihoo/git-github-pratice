@@ -24,3 +24,11 @@ function searchNotes(keyword) {
         n.title.includes(keyword) || n.content.includes(keyword)
     );
 }
+
+function deleteNote(id) {
+    const index = notes.findIndex(n => n.id === id);
+    if (index > -1) {
+        notes.splice(index, 1);
+        renderNotes();
+    }
+}
