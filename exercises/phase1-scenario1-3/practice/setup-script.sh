@@ -17,15 +17,15 @@
 # 학습자 미션: reflog를 사용하여 모든 것을 복구!
 # ══════════════════════════════════════════════════════════════
 
-set -e
+# set -e
 
-# ─── [사전 체크] ──────────────────────────────────────
-if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    echo "❌ 오류: 이미 Git 저장소 안에 있습니다!"
-    echo "   빈 폴더에서 실행해주세요."
-    echo "   예: mkdir workspace && cd workspace && bash ../setup-script.sh"
-    exit 1
-fi
+# # ─── [사전 체크] ──────────────────────────────────────
+# if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+#     echo "❌ 오류: 이미 Git 저장소 안에 있습니다!"
+#     echo "   빈 폴더에서 실행해주세요."
+#     echo "   예: mkdir workspace && cd workspace && bash ../setup-script.sh"
+#     exit 1
+# fi
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -34,8 +34,8 @@ echo "(사고 상황을 재현합니다. 잠시 기다려주세요...)"
 echo ""
 
 # ─── [Git 저장소 초기화] ──────────────────────────────
-git init --quiet
-git branch -M main
+# git init --quiet
+# git branch -M main
 
 # ─── [Commit 1: 프로젝트 초기 설정] ──────────────────
 cp "$SCRIPT_DIR/project-files/index.html" .
@@ -159,7 +159,7 @@ git add payment-ui.html
 git commit -m "feat: 결제 페이지 UI 추가" --quiet
 
 # ─── [main 브랜치로 돌아가기] ─────────────────────────
-git checkout main --quiet
+git checkout practice/reflog --quiet
 
 # ═══════════════════════════════════════════════════════
 # 🚨 사고 발생!
